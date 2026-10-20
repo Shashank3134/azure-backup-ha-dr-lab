@@ -1,0 +1,30 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+*.auto.tfvars
+
+# Secrets and keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.env
+.env.*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
