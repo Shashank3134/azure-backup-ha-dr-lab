@@ -1,0 +1,9 @@
+#cloud-config
+package_update: true
+packages:
+  - nginx
+  - curl
+runcmd:
+  - bash -lc 'HOST=$(hostname); printf "<html><body><h1>Azure Resilience Lab</h1><p>Backend: %s</p><p>Served by Nginx</p></body></html>" "$HOST" > /var/www/html/index.nginx-debian.html'
+  - systemctl enable nginx
+  - systemctl restart nginx
